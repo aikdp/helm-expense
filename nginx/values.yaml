@@ -1,5 +1,5 @@
 deployment:
-  imageVersion: stable-perl
+  imageVersion: alpine    #latest, stable-perl
   replicas: 4
 service:
   type: LoadBalancer
