@@ -16,7 +16,7 @@ metadata:
     tier: api
     project: expense
 spec:
-  replicas: {{ .Values.deployment.replicas }}
+  replicas: 1
   selector:
     matchLabels:
       app: backend
@@ -73,4 +73,4 @@ spec:
    name: backend
  minReplicas: 1
  maxReplicas: 10
- targetCPUUtilizationPercentage: 13   #usually 75 in real projects
+ targetCPUUtilizationPercentage: {{ .Values.deployment.cpuUtilization }}   #usually 75 in real projects
